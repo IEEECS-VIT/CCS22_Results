@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RESULTS || IEEE-CS VIT</title>
+</head>
+<body>
+    <div class="outer">
+        <div class="nav">
+            <div class="logo"><img src="./assets/ieee_logo.png" alt="chapter logo"></div>
+        </div>
+        <div class="main">
+            <div class="txtbox">
+                <input type="text" placeholder="Enter Registration Number" required class="regnum" id="reg_input">
+            </div>
+            
+            <div class="button" onclick>
+                <button id="btn-result" onclick="myFunction()" type="button">Check Your Result!!</button>
+            </div>
+
+            <div class="result" id="res">
+                <p id="congo">Congratulations!!</p>
+                <p class="details">Name: <span id="name"></span></p>
+                <p class="details">Registration Number: <span id="reg"></span></p>
+                <p class="details"><span id="test">Domains Selected:</span> <span id="domains"></span></p>
+            </div>
+
+            <div class="notselected" id="nos">
+                <p>
+                    Sorry!! Better Luck next Time.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./data.js">
+    </script>
+
+</body>
+</html>
