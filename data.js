@@ -759,26 +759,23 @@ const info = [
   },
 ];
 
-
-
-
 function myFunction() {
-    var input_data = document.getElementById("reg_input").value;
-    input_data = input_data.toUpperCase();
-    console.log(input_data);
-    if(accept_RegNo.includes(input_data)) {
-        document.getElementById("res").style.display = "block";
-        document.getElementById("nos").style.display = "none";
-      
-        info.forEach(function(ele) {
-          document.getElementById("name").innerHTML = ele.Name;
-          document.getElementById("reg").innerHTML = ele.RegNo;
-          document.getElementById("domains").innerHTML = ele.Domain;
-        })
-    } else {
-      document.getElementById("nos").style.display = "block";
-      document.getElementById("res").style.display = "none";
-      
-    }
+  var input_data = document.getElementById("reg_input").value;
+  input_data = input_data.toUpperCase();
+  console.log(input_data);
+  if (accept_RegNo.includes(input_data)) {
+    document.getElementById("res").style.display = "block";
+    document.getElementById("nos").style.display = "none";
 
+    info.forEach(function (ele) {
+      if (ele.RegNo === input_data) {
+        document.getElementById("name").innerHTML = ele.Name;
+        document.getElementById("reg").innerHTML = ele.RegNo;
+        document.getElementById("domains").innerHTML = ele.Domain;
+      }
+    });
+  } else {
+    document.getElementById("nos").style.display = "block";
+    document.getElementById("res").style.display = "none";
+  }
 }
